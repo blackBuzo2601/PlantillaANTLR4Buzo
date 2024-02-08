@@ -13,8 +13,8 @@ export const analizar = (input) => {
   const tokens = new antlr4.CommonTokenStream(lexer);
   const parser = new ArrayInitParser(tokens);
   parser.buildParseTrees = true;
-  const tree = parser.file();
+  const tree = parser.init();
   const customVisitor = new CustomVisitor();
 
-  return customVisitor.visitFile(tree);
+  return customVisitor.visitInit(tree);
 };
