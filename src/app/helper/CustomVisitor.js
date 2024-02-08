@@ -8,14 +8,14 @@ export default class customVisitor extends ArrayInitVisitor{
 
     // Visit a parse tree produced by ArrayInitParser#init.
     visitInit(ctx) {
-        console.log("Visitando Init");
+        console.log("Visitando gramatica Init");
         return this.visitChildren(ctx);
       }
   
   
       // Visit a parse tree produced by ArrayInitParser#value.
       visitValue(ctx) {
-        console.log("Visitando value");
+        console.log("Visitando gramatica value");
         return this.visitChildren(ctx);
       }
 
